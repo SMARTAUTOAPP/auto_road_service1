@@ -1,0 +1,387 @@
+from openai import OpenAI
+client = OpenAI()
+
+response = client.chat.completions.create(
+  model="gpt-4.1",
+  messages=[
+    {
+      "role": "system",
+      "content": [
+        {
+          "text": "احتياجات المستخدم من هذه الخدمة تتضمن حجز مواعيد لصيانة السيارات، وتتطلب عدة خطوات لتضمن تقديم الخدمة بجودة عالية وراحة للمستخدم.\n\n# خطوات \n\n1. **حجز مواعيد الصيانة**:\n   - توفير قائمة بكافة الورش والمراكز المعتمدة القريبة من المستخدم.\n   - السماح للمستخدم باختيار الموقع والوقت المناسب لحجز موعد مسبق.\n\n2. **طلب خدمة إصلاح فوري على الطريق**:\n   - تقديم الدعم لخدمات الطوارئ مثل إصلاح البطارية، تغيير الإطارات، أو السحب.\n   - إرسال الفني الأقرب بناءً على موقع المستخدم الحالي.\n\n3. **تحديد الموقع وربطه بأقرب فني أو مركز**:\n   - استخدام خاصية تحديد الموقع تلقائيًا لربط المستخدم بأقرب مزود خدمة.\n   - التأكد من حصول المستخدم على تفاصيل الاتصال بالفني أو المركز القريب.\n\n4. **تنبيهات بمواعيد الصيانة وسجل الخدمات**:\n   - إرسال تنبيهات وتذكيرات بمواعيد الصيانة القادمة.\n   - توفير سجل رقمي لكافة الخدمات السابقة التي تم تقديمها للمستخدم.\n\n5. **التواصل المباشر مع الفني أو فريق الدعم**:\n   - تمكين المستخدم من الدردشة المباشرة مع الفني أو فريق الدعم للحصول على استفسارات أو مساعدة فورية.\n\n6. **دعم السيارات الكهربائية والهجينة**:\n   - التأكد من أن خدمات الصيانة والإصلاح المتوفرة تدعم السيارات التقليدية والكهربائية والهجينة.\n\n# شكل الإخراج\n\nيجب أن تكون جميع الإخطارات والتحديثات والمحادثات بواجهة مستخدم واضحة وسهلة الاستخدام، مما يوفر تجربة سلسة للمستخدم.\n\n# ملاحظات\n\n- التأكد من تحديث قائمة المراكز والفنيين المعتمدين بانتظام.\n- اختبار النظام بانتظام لضمان أداء وظيفي أمن وفعال.\n- تقديم خيارات دفع مرنة ومريحة للمستخدمين. ",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "hii",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Hello! 👋 How can I help you today?",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "what kind of problem do u have to solve",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "hi",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "Hello again! 😊  \nHow can I assist you today? Are you looking to book a car service appointment or need help with something else?",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "هاي",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "أهلاً وسهلاً! 👋  \nكيف يمكنني مساعدتك اليوم؟ هل ترغب بحجز موعد لصيانة سيارتك أو تحتاج خدمة على الطريق؟ إذا عندك أي سؤال أو مشكلة بلغني!",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "اريد خدمة غيار زيت",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "أكيد! لتقديم خدمة غيار الزيت أحتاج بعض التفاصيل:\n\n1. اسمك الكامل\n2. موديل سيارتك (مثلاً: تويوتا كورولا 2020)\n3. رقم الهاتف للتواصل\n4. موقعك الحالي (أو اختر مركز صيانة قريب إذا تحب تحجز موعد لاحق)\n5. هل تفضل خدمة في المركز أو خدمة على الطريق؟\n\nيرجى تزويدي بهذه المعلومات لبدء حجز الخدمة لك مباشرة.",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "يزن احمد 1 2تويوتا كامري 3 0788059511   صيانة على الطريق 4",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [
+        {
+          "text": "شكرًا لك يزن أحمد. فقط أحتاج معرفة موقعك الحالي (الموقع الجغرافي: اسم المنطقة أو مشاركة موقع GPS إذا أمكن) حتى أستطيع ربطك بأقرب فني لخدمة غيار الزيت على الطريق.\n\nيرجى تزويدي بموقعك الحالي (مثلاً: عمان – الدوار السابع، أو إرسال خطوط الطول والعرض إذا متوفرة).",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "content": [
+        {
+          "text": "حي الشهيد الجنوبي غابة الحسن",
+          "type": "text"
+        }
+      ]
+    },
+    {
+      "role": "assistant",
+      "content": [],
+      "tool_calls": [
+        {
+          "id": "call_REKGZiePEanMgEtv89cyv8eV",
+          "type": "function",
+          "function": {
+            "name": "car_service_app",
+            "arguments": "{\"location\":{\"latitude\":0,\"longitude\":0},\"action_type\":\"طلب خدمة صيانة على الطريق\",\"user_details\":{\"name\":\"يزن احمد\",\"car_model\":\"تويوتا كامري\",\"contact_number\":\"0788059511\",\"service_needed\":\"غيار زيت على الطريق\"}}"
+          }
+        },
+        {
+          "id": "manualToolCall_wdnjvx",
+          "type": "function",
+          "function": {
+            "name": "create_database_tables",
+            "arguments": "{\"cars\":{\"id\":0,\"make\":\"\",\"model\":\"\",\"year\":0},\"customers\":{\"id\":0,\"name\":\"\",\"contact_info\":\"\"},\"reservations\":{\"id\":0,\"car_id\":0,\"customer_id\":0,\"date\":\"\"},\"services\":{\"id\":0,\"description\":\"\",\"cost\":0}}"
+          }
+        },
+        {
+          "id": "manualToolCall_dw65sk",
+          "type": "function",
+          "function": {
+            "name": "car_service_app",
+            "arguments": "{\"action_type\":\"\",\"user_details\":{\"name\":\"\",\"contact_number\":\"\",\"car_model\":\"\",\"service_needed\":\"\"},\"location\":{\"latitude\":0,\"longitude\":0}}"
+          }
+        }
+      ]
+    },
+    {
+      "role": "tool",
+      "content": [
+        {
+          "text": "",
+          "type": "text"
+        }
+      ],
+      "tool_call_id": "call_REKGZiePEanMgEtv89cyv8eV"
+    },
+    {
+      "role": "tool",
+      "content": [
+        {
+          "text": "{\n  \"status\": \"success\",\n  \"message\": \"Database tables created successfully.\",\n  \"tables\": {\n    \"cars\": {\n      \"id\": \"int PRIMARY KEY\",\n      \"make\": \"varchar(255)\",\n      \"model\": \"varchar(255)\",\n      \"year\": \"int\"\n    },\n    \"customers\": {\n      \"id\": \"int PRIMARY KEY\",\n      \"name\": \"varchar(255)\",\n      \"contact_info\": \"varchar(255)\"\n    },\n    \"reservations\": {\n      \"id\": \"int PRIMARY KEY\",\n      \"car_id\": \"int REFERENCES cars(id)\",\n      \"customer_id\": \"int REFERENCES customers(id)\",\n      \"date\": \"date\"\n    },\n    \"services\": {\n      \"id\": \"int PRIMARY KEY\",\n      \"description\": \"varchar(255)\",\n      \"cost\": \"decimal(10, 2)\"\n    }\n  }\n}",
+          "type": "text"
+        }
+      ],
+      "tool_call_id": "manualToolCall_wdnjvx"
+    },
+    {
+      "role": "tool",
+      "content": [
+        {
+          "text": "{\n  \"status\": \"error\",\n  \"message\": \"Please provide valid inputs for action_type and user details.\",\n  \"data\": {\n    \"user_details\": {\n      \"name\": null,\n      \"contact_number\": null,\n      \"car_model\": null,\n      \"service_needed\": null\n    },\n    \"location\": {\n      \"latitude\": 0,\n      \"longitude\": 0\n    }\n  }\n}",
+          "type": "text"
+        }
+      ],
+      "tool_call_id": "manualToolCall_dw65sk"
+    }
+  ],
+  response_format={
+    "type": "text"
+  },
+  tools=[
+    {
+      "type": "function",
+      "function": {
+        "name": "car_service_app",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "action_type",
+            "user_details",
+            "location"
+          ],
+          "properties": {
+            "location": {
+              "type": "object",
+              "required": [
+                "latitude",
+                "longitude"
+              ],
+              "properties": {
+                "latitude": {
+                  "type": "number",
+                  "description": "خط العرض لموقع المستخدم"
+                },
+                "longitude": {
+                  "type": "number",
+                  "description": "خط الطول لموقع المستخدم"
+                }
+              },
+              "description": "موقع المستخدم للحصول على خدمة الطريق",
+              "additionalProperties": False
+            },
+            "action_type": {
+              "type": "string",
+              "description": "نوع الإجراء المطلوب (مثل حجز موعد أو طلب مساعدة)"
+            },
+            "user_details": {
+              "type": "object",
+              "required": [
+                "name",
+                "contact_number",
+                "car_model",
+                "service_needed"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "اسم المستخدم"
+                },
+                "car_model": {
+                  "type": "string",
+                  "description": "موديل السيارة"
+                },
+                "contact_number": {
+                  "type": "string",
+                  "description": "رقم تفصيل الاتصال بالمستخدم"
+                },
+                "service_needed": {
+                  "type": "string",
+                  "description": "نوع الخدمة المطلوبة"
+                }
+              },
+              "additionalProperties": False
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "تطبيق صيانة السيارات وخدمة الطريق – راحتك في لمسة! تطبيق ذكي ومتكامل يساعدك في حجز مواعيد صيانة السيارات أو طلب المساعدة الفورية على الطريق."
+      }
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "create_database_tables",
+        "strict": True,
+        "parameters": {
+          "type": "object",
+          "required": [
+            "cars",
+            "customers",
+            "reservations",
+            "services"
+          ],
+          "properties": {
+            "cars": {
+              "type": "object",
+              "required": [
+                "id",
+                "make",
+                "model",
+                "year"
+              ],
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "description": "معرف السيارة (المفتاح الأساسي)"
+                },
+                "make": {
+                  "type": "string",
+                  "description": "ماركة السيارة"
+                },
+                "year": {
+                  "type": "number",
+                  "description": "سنة تصنيع السيارة"
+                },
+                "model": {
+                  "type": "string",
+                  "description": "طراز السيارة"
+                }
+              },
+              "additionalProperties": False
+            },
+            "services": {
+              "type": "object",
+              "required": [
+                "id",
+                "description",
+                "cost"
+              ],
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "description": "معرف الخدمة (المفتاح الأساسي)"
+                },
+                "cost": {
+                  "type": "number",
+                  "description": "تكلفة الخدمة"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "وصف الخدمة المقدمة"
+                }
+              },
+              "additionalProperties": False
+            },
+            "customers": {
+              "type": "object",
+              "required": [
+                "id",
+                "name",
+                "contact_info"
+              ],
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "description": "معرف العميل (المفتاح الأساسي)"
+                },
+                "name": {
+                  "type": "string",
+                  "description": "اسم العميل"
+                },
+                "contact_info": {
+                  "type": "string",
+                  "description": "معلومات الاتصال بالعميل"
+                }
+              },
+              "additionalProperties": False
+            },
+            "reservations": {
+              "type": "object",
+              "required": [
+                "id",
+                "car_id",
+                "customer_id",
+                "date"
+              ],
+              "properties": {
+                "id": {
+                  "type": "number",
+                  "description": "معرف الحجز (المفتاح الأساسي)"
+                },
+                "date": {
+                  "type": "string",
+                  "description": "تاريخ الحجز"
+                },
+                "car_id": {
+                  "type": "number",
+                  "description": "معرف السيارة المحجوزة (علاقة مع جدول السيارات)"
+                },
+                "customer_id": {
+                  "type": "number",
+                  "description": "معرف العميل الذي قام بالحجز (علاقة مع جدول العملاء)"
+                }
+              },
+              "additionalProperties": False
+            }
+          },
+          "additionalProperties": False
+        },
+        "description": "SQL Statements لإنشاء الجداول الأساسية لقاعدة البيانات الخاصة بتطبيق حجز وصيانة السيارات والمساعدة على الطريق"
+      }
+    }
+  ],
+  temperature=1,
+  max_completion_tokens=2048,
+  top_p=1,
+  frequency_penalty=0,
+  presence_penalty=0
+)
